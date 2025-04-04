@@ -104,7 +104,7 @@ sub client_got_response {
   $heap->{answers}++;
 
   foreach (@answers) {
-    my $response_data_string = $_->rdatastr;
+    my $response_data_string = $_->rdstring;
     my $response_data_type   = $_->type;
 
     DEBUG and warn

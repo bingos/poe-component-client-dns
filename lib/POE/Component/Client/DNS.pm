@@ -622,7 +622,7 @@ POE::Component::Client::DNS - non-blocking, parallel DNS client
       print(
         "$response->{host} = ",
         $answer->type(), " ",
-        $answer->rdatastr(), "\n"
+        $answer->rdstring(), "\n"
       );
     }
   }

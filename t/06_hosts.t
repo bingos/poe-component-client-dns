@@ -140,7 +140,7 @@ sub a_data {
 
   return (
     grep { ref() eq "Net::DNS::RR::A" } $response->{response}->answer()
-  )[0]->rdatastr();
+  )[0]->rdstring();
 }
 
 
@@ -149,7 +149,7 @@ sub aaaa_data {
   return "" unless defined $response->{response};
   return (
     grep { ref() eq "Net::DNS::RR::AAAA" } $response->{response}->answer()
-  )[0]->rdatastr();
+  )[0]->rdstring();
 }
 
 
